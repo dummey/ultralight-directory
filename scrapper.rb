@@ -26,6 +26,7 @@ File.open("source/directory", "r") do |f|
 end
 
 csv_string = CSV.generate do |csv|
+  csv << ['URL', 'Description']
   rows.each do |row|
       csv << row
   end
